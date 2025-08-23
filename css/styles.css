@@ -556,7 +556,7 @@ body {
     color: var(--text-light);
     margin: 0;
 }
-
+/* Responsive Styles */
 /* Theme Toggle Button */
 .theme-toggle {
     position: fixed;
