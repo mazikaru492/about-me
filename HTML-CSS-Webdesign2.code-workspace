@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../HTML-CSS-Webdesign2"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "about-me"
+	}
+}
