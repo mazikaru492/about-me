@@ -398,6 +398,62 @@ body {
     background: linear-gradient(45deg, var(--primary-color), #fbbf24);
 }
 
+/* Programming skill card with background */
+.skill-card:nth-child(1) {
+    position: relative;
+    overflow: hidden;
+    background-image: url('../media-1.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.skill-card:nth-child(1)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.85);
+    z-index: 1;
+}
+
+.skill-card:nth-child(1) .card-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Learning ability skill card with background */
+.skill-card:nth-child(2) {
+    position: relative;
+    overflow: hidden;
+    background-image: url('../media-2.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.skill-card:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.85);
+    z-index: 1;
+}
+
+.skill-card:nth-child(2) .card-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Dark mode overlay adjustments for skill cards */
+[data-theme="dark"] .skill-card:nth-child(1)::before,
+[data-theme="dark"] .skill-card:nth-child(2)::before {
+    background: rgba(45, 55, 72, 0.85);
+}
+
 .skill-card:nth-child(2) .skill-progress {
     background: linear-gradient(45deg, var(--secondary-color), #6bb6ff);
 }
