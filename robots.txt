@@ -1,0 +1,11 @@
+# Allow all search engines to crawl the entire site
+User-agent: *
+Allow: /
+
+# Disallow crawling of specific directories and files
+Disallow: /css/
+Disallow: /js/
+Disallow: /.git/
+
+# Sitemap location
+Sitemap: https://your-domain.com/sitemap.xml
