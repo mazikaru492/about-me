@@ -141,6 +141,33 @@ body {
     font-weight: 500;
 }
 
+/* Hero Image */
+.hero-image {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.profile-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition);
+    filter: brightness(1) contrast(1) saturate(1);
+}
+
+/* Dark mode image adjustments */
+[data-theme="dark"] .profile-image {
+    filter: brightness(0.9) contrast(1.1) saturate(0.8);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-heavy);
+}
+
 /* Section Styles */
 .section {
     margin: 4rem 0;

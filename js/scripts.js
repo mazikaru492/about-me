@@ -139,6 +139,9 @@ function initThemeToggle() {
             html.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             
+            // Update profile image for theme
+            updateProfileImageForTheme(newTheme);
+            
             // Add a subtle animation to the button
             themeToggle.style.transform = 'translateY(-50%) scale(0.9)';
             setTimeout(() => {
@@ -192,6 +195,34 @@ function showThemeChangeToast(theme) {
         }, 300);
     }, 3000);
 }
+
+// Update profile image for theme changes
+function updateProfileImageForTheme(theme) {
+    const profileImage = document.querySelector('.profile-image');
+    if (profileImage) {
+        // Add smooth transition
+        profileImage.style.transition = 'filter 0.3s ease';
+        
+        // Apply theme-specific filters
+        if (theme === 'dark') {
+            profileImage.style.filter = 'brightness(0.9) contrast(1.1) saturate(0.8)';
+        } else {
+            profileImage.style.filter = 'brightness(1) contrast(1) saturate(1)';
+        }
+        
+        // Add a subtle animation to indicate the change
+        profileImage.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            profileImage.style.transform = 'scale(1)';
+        }, 200);
+    }
+}
+
+// Initialize profile image on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    updateProfileImageForTheme(currentTheme);
+});
 
 // Initialize background animation
 createBackgroundAnimation();
