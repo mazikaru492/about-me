@@ -399,7 +399,7 @@ body {
 }
 
 /* Programming skill card with background */
-.skill-card:nth-child(1) {
+.programming-card {
     position: relative;
     overflow: hidden;
     background-image: url('../media-1.jpeg');
@@ -407,7 +407,7 @@ body {
     background-position: center;
 }
 
-.skill-card:nth-child(1)::before {
+.programming-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -418,13 +418,13 @@ body {
     z-index: 1;
 }
 
-.skill-card:nth-child(1) .card-content {
+.programming-card .card-content {
     position: relative;
     z-index: 2;
 }
 
 /* Learning ability skill card with background */
-.skill-card:nth-child(2) {
+.learning-card {
     position: relative;
     overflow: hidden;
     background-image: url('../media-2.jpeg');
@@ -432,7 +432,7 @@ body {
     background-position: center;
 }
 
-.skill-card:nth-child(2)::before {
+.learning-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -443,14 +443,14 @@ body {
     z-index: 1;
 }
 
-.skill-card:nth-child(2) .card-content {
+.learning-card .card-content {
     position: relative;
     z-index: 2;
 }
 
 /* Dark mode overlay adjustments for skill cards */
-[data-theme="dark"] .skill-card:nth-child(1)::before,
-[data-theme="dark"] .skill-card:nth-child(2)::before {
+[data-theme="dark"] .programming-card::before,
+[data-theme="dark"] .learning-card::before {
     background: rgba(45, 55, 72, 0.85);
 }
 
